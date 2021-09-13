@@ -1,0 +1,30 @@
+nav {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;    
+    background-color:rgba(0, 0, 0, 0.6);
+    // padding-right: 25rem;
+    
+    ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+        }
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            padding-right: 3rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }   
+        } 
+    }
+}

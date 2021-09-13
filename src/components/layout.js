@@ -1,25 +1,37 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Header } from "./header";
+import { Footer } from "./footer";
 import "../assets/scss/_layout.scss";
+import styled from 'styled-components'
+
+const Container = styled.div`
+    font-family: sans-serif;
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+
+      .Title {
+        color: #f9f2c1;
+      }
+    }
+    
+`
+
 
 export const Layout = ({ PageTitle, children }) => {
   return (
-    <div className="container">
-      <title>{PageTitle}</title>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        <h1 className="heading">{PageTitle}</h1>
-        {children}
-      </main>
-    </div>
+      <div>
+        <Header/>
+        <Container>
+          <title>{PageTitle}</title>
+          <main>
+              {children}
+          </main>
+        </Container>
+        <Footer/>
+      </div>
   );
 };
