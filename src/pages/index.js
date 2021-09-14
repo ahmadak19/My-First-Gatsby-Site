@@ -23,7 +23,6 @@ const IndexPage = ({ data }) => {
       <div className="Title">
         <h1>Willkommen zu DOTA2</h1>
       </div>
-      {heros.forEach(hero => console.log(hero.node.id))}
       <Grid>
         {list}
       </Grid>

@@ -9,6 +9,8 @@ const Container = styled.div`
   align-items: center;
   background-color: rgba(0,0,0,0.3);
   padding-bottom: 20px;
+  width: 100vw;
+
   color: #fff;
   h1 {
     color:#fff;
@@ -30,12 +32,15 @@ const Container = styled.div`
 
 
 const HeroDetails = ({ data, params }) => {
-  const title = params.hero;
-  const hero = data.allDatoCmsHero.edges.find(
-    (elem) => elem.node.title === title.toUpperCase()
+
+  const title =  params?.hero?.toUpperCase();
+  const hero = data?.allDatoCmsHero?.edges?.find(
+    (elem) => elem.node.title === title
   );
-  return (
-    <Layout PageTitle={title}>
+  console.log(hero, title);
+  return title !== undefined && hero !== undefined &&(
+    
+  <Layout PageTitle={title}>
       <Container>
         <h1>{hero.node.title}</h1>
         <div className="main">
@@ -50,8 +55,8 @@ const HeroDetails = ({ data, params }) => {
 export default HeroDetails;
 
 export const query = graphql`
-  query hero {
-    allDatoCmsHero {
+  query hero ($title: String) {
+    allDatoCmsHero (filter: {title: {eq: $title}})  {
       edges {
         node {
           id

@@ -2,7 +2,6 @@ import * as React from "react";
 import "../assets/scss/_heroContainer.scss";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { graphql } from "gatsby"; 
 
 const HeadingLink = styled(Link)`
     text-decoration: none;
