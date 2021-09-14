@@ -14,7 +14,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@popperjs/core": "^2.10.1",
     "babel-plugin-styled-components": "^1.13.2",
+    "bootstrap": "^5.1.1",
     "gatsby": "^3.13.0",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",

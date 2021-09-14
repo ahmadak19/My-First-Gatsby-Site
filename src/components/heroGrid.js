@@ -39,7 +39,7 @@ export const HeroGrid = ({ image, title }) => {
   `;
 
   return (
-    <HeadingLink to={`/heros/${title.toLowerCase()}`} >
+    <HeadingLink to={`/heros/${title}`} >
       <HeroGrid>
         <h3>{title}</h3>
       </HeroGrid>
